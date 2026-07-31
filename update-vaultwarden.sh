@@ -144,7 +144,8 @@ systemctl --user --no-pager status "$SERVICE_NAME" || true
 if systemctl --user is-active --quiet "$SERVICE_NAME"; then
 	trap - ERR
 	log "Update OK. Backups behalten: vaultwarden_alt, web-vault_alt, data_backup_${DATE_STAMP}"
-	log "Nach Test löschen:  $0 --cleanup-old"
+	log "Nach Test Backups löschen:"
+	log "  TMP=\$(mktemp -d) && wget -qO \"\$TMP/u.sh\" \"https://raw.githubusercontent.com/hiasluz/vaultwarden-update/main/update-vaultwarden.sh\" && bash \"\$TMP/u.sh\" --cleanup-old; rm -rf \"\$TMP\""
 else
 	die "Dienst nicht active"
 fi
