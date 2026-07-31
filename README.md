@@ -54,7 +54,3 @@ chmod +x update-vaultwarden.sh
 2. Backend aus `vaultwarden/server:alpine` (docker-image-extract)
 3. Neuestes Web-Vault von [bw_web_builds](https://github.com/dani-garcia/bw_web_builds/releases/latest)
 4. Aufräumen, Service starten; bei Fehler Rollback
-
-## Privat vs. öffentlich
-
-Für den One-Liner oben muss die Datei öffentlich per Raw-URL erreichbar sein. Das Skript enthält keine Secrets — öffentliches Repo ist dafür die einfachste Variante. Bei privatem Repo: Kollaborateure einladen und per `git clone` (SSH) nutzen.
