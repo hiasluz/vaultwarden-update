@@ -54,3 +54,7 @@ chmod +x update-vaultwarden.sh
 2. Backend aus `vaultwarden/server:alpine` (docker-image-extract)
 3. Neuestes Web-Vault von [bw_web_builds](https://github.com/dani-garcia/bw_web_builds/releases/latest)
 4. Aufräumen, Service starten; bei Fehler Rollback
+
+## Lizenz
+
+[MIT](LICENSE)
